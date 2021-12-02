@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back function</title>
+</head>
+<body>
+    
+<div></div>
+
+<script>
+
+news= [
+
+{
+    name: "ishwor",
+lunch: "Fruits, Nuts, protin shake"
+
+},
+
+
+{
+    name: "Bibek",
+lunch: "Fruits, Nuts, protin shake"
+
+},
+
+
+
+{
+    name: "Mukesh",
+lunch: "Fruits, Nuts, protin shake"
+
+},
+
+]
+
+
+
+function showMenu(){
+
+
+setTimeout(()=>{
+result= ""
+
+news.forEach((postt)=>{
+
+    result+= `<li>${postt.name}</li>`
+
+
+})
+
+document.querySelector("div").innerHTML= result
+
+},2000)
+}
+
+
+showMenu()
+
+
+function addNews(newdata, callback){
+    setTimeout(()=>{
+news.push(newdata)
+
+callback()
+
+
+    },3000)
+}
+
+
+// function addNews(fristtt, seconfd){
+
+//     setTimeout(()=>{
+
+// news.push(fristtt)
+
+
+// seconfd()
+
+// },3000)
+
+
+
+
+
+
+
+
+
+
+
+
+// iam going to define new function 
+
+addNews({name: "fourth title", content:"added from the push method"},showNews)
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call backfunction</title>
+</head>
+<body>
+    
+    <div></div>
+
+
+
+    <script>
+const news=[
+{
+    newsTitle: "frist title",
+    content: "hello World"
+},
+
+
+{
+    newsTitle: "second title",
+    content: "we are learning javascript"
+},
+
+
+{
+    newsTitle: "third title",
+    content: "this is call back function"
+},
+
+
+]
+
+
+// define shownews
+// function showNews(){
+// setTimeout()
+// }
+
+// if write arrow funvtion you  dont need o
+
+
+
+function showNews(){
+
+setTimeout(()=>{
+let result =""
+
+news.forEach((post)=>{
+result += `<li> ${post.newsTitle}</li>`
+})
+
+document.querySelector('div').innerHTML= result
+},2000)
+
+}
+
+// call show News function
+
+showNews()
+
+
+// addNews({
+//     newsTitle: "Fourths  Title",
+//     content: "added the push method"
+// })
+
+// function addNews(newdata){
+
+// setTimeout(()=>{
+// new.push(newdata)
+
+// }, 3000)
+
+// }
+
+
+
+// define addnews withg ccall back function
+
+function addNews(newdata, callback){
+    setTimeout(()=>{
+news.push(newdata)
+
+callback()
+
+
+    },3000)
+}
+
+
+
+
+
+
+// call fucntion addnewswith callback function shownews
+addNews({newsTitle: "fourth title", content:"added from the push method"},showNews)
+
+
+
+
+
+    </script>
+
+</body>
+</html> -->

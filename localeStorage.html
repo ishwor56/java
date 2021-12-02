@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>locale storage</title>
+</head>
+<body>
+    
+
+<script>
+
+const key = ""
+
+localStorage.setItem('javascript', 'this is store in browser')
+
+const show = localStorage.getItem('javascript')
+
+console.log(show)
+
+
+
+// JSON=> JAVASCRIPT OBJECT NOTTATION
+
+
+
+let details= {
+
+"fristname": "ishwor",
+"lastname": "gautam",
+"subject": ["html", "css", "javascript", "bootstap", "react"]
+
+}
+
+localStorage.setItem('student', obj_covent_to_string)
+
+const obj_covent_to_string = JSON.stringify(details)
+
+
+// const Showdata = localStorage.getItem('student')
+
+// const string_to_obj = JSON.parse(Showdata)
+
+// console.log(Showdata)
+
+
+const takeit = localStorage.getItem("student")
+const string_to_obj = JSON.parse(takeit)
+
+console.log(string_to_obj.subject[2])
+
+</script>
+
+
+</body>
+</html>

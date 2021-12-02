@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Images Slider</title>
+</head>
+<body>
+    
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+.container{
+    width: 500px;
+    height: 600px;
+    margin: auto;
+}
+
+.container img{
+width: 100%;
+height: 100%;
+}
+
+
+</style>
+
+
+
+<div class="container">
+    <img src="./images/four.jpg" alt="..." id="image">
+    <button class="left-btn" onclick="prev()">&lt;</button>
+    <button class="right-btn" onclick="next()">&gt;</button>
+</div>
+
+<script src="imageslider.js"></script>
+</body>
+</html>
